@@ -1,0 +1,9 @@
+out_L
+out_T
+out_P
+out_B
+out_zero
+out_one
+out_two
+...
+out_nine
