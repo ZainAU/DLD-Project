@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/zu06777/Documents/Vivado/project_trial/project_trial.runs/impl_1/TopLevelModule.tcl"
+  variable script "F:/Documents/HabibU/5. Semester 3 - Fall 2021/XueXi/DLD - CS 130/DLD Project/project_trial/project_trial.runs/impl_1/TopLevelModule.tcl"
   variable category "vivado_impl"
 }
 
@@ -114,6 +114,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "Implementation" START { ROLLUP_1 }
 OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
@@ -123,9 +124,8 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 1
-  set_param xicom.use_bs_reader 1
   open_checkpoint TopLevelModule_routed.dcp
-  set_property webtalk.parent_dir C:/Users/zu06777/Documents/Vivado/project_trial/project_trial.cache/wt [current_project]
+  set_property webtalk.parent_dir {F:/Documents/HabibU/5. Semester 3 - Fall 2021/XueXi/DLD - CS 130/DLD Project/project_trial/project_trial.cache/wt} [current_project]
 set_property TOP TopLevelModule [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }

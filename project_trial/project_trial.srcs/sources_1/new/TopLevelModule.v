@@ -7,7 +7,7 @@
 
 //endmodule
  
-module TopLevelModule(clk, state,red, green, blue, h_sync, v_sync);
+module TopLevelModule(clk, state,red, green, blue, h_sync, v_sync, some_pin);
 input clk;
 input state;
 output [3:0]red;
@@ -15,10 +15,12 @@ output [3:0]green;
 output [3:0]blue;
 output h_sync;
 output v_sync;
+output some_pin;
  
 wire M1,M3,M7;
 wire [9:0] M2, M4,M8,M9;
  
+assign some_pin = 1'b1;
 clk_div a1(clk,M1);
 h_counter a2(M1,M2,M3);
 v_counter a3(M1,M3, M4);
@@ -68,7 +70,7 @@ module startup(pixel_x, pixel_y, squad);
   input [9:0] pixel_y;
   output squad;
   
-  reg [0:64] startup [64:0];
+  reg [0:29] startup [29:0];
   
   wire [5:0] x = pixel_x[9:4] - 5;
   wire [5:0] y = pixel_y[9:4];
@@ -113,66 +115,81 @@ endmodule
   input [9:0] pixel_y;
   output nums;
   
-  reg [0:29] m [29:0];
+  reg [0:27] m [27:0];
   
   wire [5:0] x = pixel_x[9:4] - 5;
   wire [5:0] y = pixel_y[9:4];
   assign nums = m[y][x];
   
   initial begin
-    m[0]  = 30'b000000000000000000000000000000;
-    m[1]  = 30'b000000000000000000000000000000;
-    m[2]  = 30'b000000000000001000000000000000;
-    m[3]  = 30'b000000000000001000000000000000;
-    m[4]  = 30'b000000000000001000000000000000;
-    m[5]  = 30'b000000000000001000000000000000;
-    m[6]  = 30'b000000000000001000000000000000;
-    m[7]  = 30'b000000000000001000000000000000;
-    m[8]  = 30'b000000000000001000000000000000;
-    m[9]  = 30'b000000000000000000000000000000;
-    m[10] = 30'b000000000000000000000000000000;
-    m[11] = 30'b000000000000001000001000000000;
-    m[12] = 30'b000000000000001000001000000000;
-    m[13] = 30'b000000000000001000001000000000;
-    m[14] = 30'b000000000000001111111000000000;
-    m[15] = 30'b000000000000001000000000000000;
-    m[16] = 30'b000000000000001000000000000000;
-    m[17] = 30'b000000000000001000000000000000;
-    m[18] = 30'b000000000000001000000000000000;
-    m[19] = 30'b000000000000000000000000000000;
-    m[20] = 30'b000000000000000000000000000000;
-    m[21] = 30'b000000000000001001001000000000;
-    m[22] = 30'b000000000000001001001000000000;
-    m[23] = 30'b000000000000001001001000000000;
-    m[24] = 30'b000000000000001111111000000000;
-    m[25] = 30'b000000000000001000000000000000;
-    m[26] = 30'b000000000000000000000000000000;
-    m[27] = 30'b000000000000000000000000000000;
-    m[28] = 30'b000000000000000000000000000000;
-    m[29] = 30'b000000000000000000000000000000;  
+    m[0]  = 28'b0000000000000000000000000000;
+    m[1]  = 28'b0001000000000000000000000000;
+    m[2]  = 28'b0001000000000010000000000000;
+    m[3]  = 28'b0001000000000010000000000000;
+    m[4]  = 28'b0001000000000010000000000000;
+    m[5]  = 28'b0000000000000010000000000000;
+    m[6]  = 28'b0000000000000010000000000000;
+    m[7]  = 28'b0000000000000010000000000000;
+    m[8]  = 28'b0000000000000010000000000000;
+    m[9]  = 28'b0000000000000000000000000000;
+    m[10] = 28'b0000000000000000000000000000;
+    m[11] = 28'b0000000000000010000010000000;
+    m[12] = 28'b0000000000000010000010000000;
+    m[13] = 28'b0000000000000010000010000000;
+    m[14] = 28'b0000000000000011111110000000;
+    m[15] = 28'b0000000000000010000000000000;
+    m[16] = 28'b0000000000000010000000000000;
+    m[17] = 28'b0000000000000010000000000000;
+    m[18] = 28'b0000000000000010000000000000;
+    m[19] = 28'b0000000000000000000000000000;
+    m[20] = 28'b0000000000000000000000000000;
+    m[21] = 28'b0000000000000010010010000000;
+    m[22] = 28'b0000000000000010010010000000;
+    m[23] = 28'b0000000000000010010010000000;
+    m[24] = 28'b0000000000000011111110000000;
+    m[25] = 28'b0000000000000010000000000000;
+    m[26] = 28'b0000000000000000000000000000;
+    m[27] = 28'b0000000000000000000000000000;
+  
   end 
 
 endmodule
  
- 
-
+//module LEARN(
+//    input clk_25,
+//    input en,
+//    input play,
+//    input [3:0] num,
+//    output reg audio_en,
+//    output reg [3:0] num_audio,
+//    output state);
+   
+//   always @(posedge clk_25) begin
+//        if (num == 4'b0000) begin
+//            audio_en = 1'b1;
+//            num_audio = 4'b0000;
+//        end
+//        if (num == 4'b0001) begin
+//            audio_en = 1'b1;
+//            num_audio = 4'b0001;
+//        end 
+//    end 
+// endmodule 
  
  module pixel_gen( 
   input clk_d, 
   input [9:0] pixel_x, 
   input [9:0] pixel_y, 
   input video_on,
-//  input start,
-//  input game,
-input man_state,
+  //  input start,
+  //  input game,
+  input man_state,
   output reg [3:0] red=0, 
   output reg [3:0] green=0, 
-  output reg [3:0] blue=0
- 
-);
+  output reg [3:0] blue=0);
   parameter start = 0;
   parameter game = 1;
-
+    
   
   reg [1:0] state = start;
   wire start_pix;
@@ -213,84 +230,73 @@ input man_state,
                 green <= 4'h0; 
                 blue <= 4'h0; 
               end 
-              
           end
-        
       end
      end 
 endmodule
 
  
 module h_counter(clk,h_count,trig_v);
-input clk;
-output [9:0] h_count;
-reg [9:0] h_count;
-output trig_v;
-reg trig_v;
-initial h_count = 0;
-initial trig_v = 0;
- 
-always @ (posedge clk)
-begin
-if (h_count <= 798)
-begin
-h_count <= h_count +1;
-trig_v <= 0;
-end
-else
-begin
-h_count <= 0;
-trig_v <= 1;
-end
-end
+    input clk;
+    output [9:0] h_count;
+    reg [9:0] h_count;
+    output trig_v;
+    reg trig_v;
+    
+    initial h_count = 0;
+    initial trig_v = 0;
+     
+    always @ (posedge clk) begin
+        if (h_count <= 798) begin
+            h_count <= h_count +1;
+            trig_v <= 0;
+        end
+        else begin
+            h_count <= 0;
+            trig_v <= 1;
+        end
+    end
 endmodule
  
 module v_counter(clk,enable_v, v_count);
-input clk;
-input enable_v;
-output [9:0] v_count;
-reg [9:0] v_count;
-initial v_count = 0;
- 
-always @ (posedge clk)
-begin
-if (enable_v ==1)
-begin
-if (v_count <= 523)
-begin
-v_count <= v_count + 1;
-end
-else
-begin
-v_count <= 0;
-end
-end
-end
+    input clk;
+    input enable_v;
+    output [9:0] v_count;
+    reg [9:0] v_count;
+    initial v_count = 0;
+     
+    always @ (posedge clk) begin
+        if (enable_v ==1) begin
+            if (v_count <= 523) begin
+                v_count <= v_count + 1;
+            end
+            else begin
+                v_count <= 0;
+            end
+        end
+    end
 endmodule
  
 module clk_div (clk, clk_d);
-parameter div_value = 1;
-input clk;
-output clk_d;
- 
-reg clk_d;
-reg count;
- 
-initial
-begin
-clk_d = 0;
-count = 0;
-end
-always @(posedge clk)
-begin
-if (count == div_value)
-count <= 0; // reset count
-else
-count <= count + 1; //count up
-end
-always @(posedge clk)
-begin
-if (count == div_value)
-clk_d <= ~clk_d; //toggle
-end
+    parameter div_value = 1;
+    input clk;
+    output clk_d;
+     
+    reg clk_d;
+    reg count;
+     
+    initial begin
+        clk_d = 0;
+        count = 0;
+    end
+    always @(posedge clk) begin
+        if (count == div_value)
+            count <= 0; // reset count
+        else
+            count <= count + 1; //count up
+    end
+    always @(posedge clk) begin
+        if (count == div_value)
+            clk_d <= ~clk_d; //toggle
+    end
 endmodule

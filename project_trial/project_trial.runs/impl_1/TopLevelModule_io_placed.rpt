@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date                      : Sat Nov 27 11:37:23 2021
-| Host                      : HU-DOPX-COM03 running 64-bit major release  (build 9200)
+| Date                      : Thu Dec 16 18:14:01 2021
+| Host                      : Another-Ideapad running 64-bit major release  (build 9200)
 | Command                   : report_io -file TopLevelModule_io_placed.rpt
 | Design                    : TopLevelModule
 | Device                    : xc7a35t
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            16 |
+|            17 |
 +---------------+
 
 
@@ -72,7 +72,7 @@ Table of Contents
 | B16        |             | High Range | IO_L13N_T2_MRCC_16           | User IO       |             |      16 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | B17        |             | High Range | IO_L14N_T2_SRCC_16           | User IO       |             |      16 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | B18        |             | High Range | IO_L19P_T3_16                | User IO       |             |      16 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| B19        |             | High Range | VCCO_16                      | VCCO          |             |      16 |            |      |                     |                      |   any** |            |           |          |      |                  |              |                   |              |
+| B19        |             | High Range | VCCO_16                      | VCCO          |             |      16 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | C1         |             |            | MGTAVCC                      | Gigabit Power |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | C2         |             |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | C3         |             |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
@@ -86,11 +86,11 @@ Table of Contents
 | C11        |             | Dedicated  | CCLK_0                       | Config        |             |       0 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | C12        |             | Dedicated  | GNDADC_0                     | XADC          |             |       0 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | C13        |             | Dedicated  | VCCADC_0                     | XADC          |             |       0 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| C14        |             | High Range | VCCO_16                      | VCCO          |             |      16 |            |      |                     |                      |   any** |            |           |          |      |                  |              |                   |              |
+| C14        |             | High Range | VCCO_16                      | VCCO          |             |      16 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | C15        |             | High Range | IO_L11P_T1_SRCC_16           | User IO       |             |      16 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| C16        |             | High Range | IO_L13P_T2_MRCC_16           | User IO       |             |      16 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| C16        | some_pin    | High Range | IO_L13P_T2_MRCC_16           | OUTPUT        | LVCMOS33    |      16 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | C17        |             | High Range | IO_L14P_T2_SRCC_16           | User IO       |             |      16 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| C18        |             | High Range | VCCO_16                      | VCCO          |             |      16 |            |      |                     |                      |   any** |            |           |          |      |                  |              |                   |              |
+| C18        |             | High Range | VCCO_16                      | VCCO          |             |      16 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | C19        |             |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | D1         |             |            | MGTPTXN0_216                 | Gigabit       |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | D2         |             |            | MGTPTXP0_216                 | Gigabit       |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
@@ -119,7 +119,7 @@ Table of Contents
 | G10        |             |            | VCCINT                       | VCCINT        |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | G11        |             |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | G12        |             | Dedicated  | VCCO_0                       | VCCO          |             |       0 |            |      |                     |                      |   any** |            |           |          |      |                  |              |                   |              |
-| G13        |             | High Range | VCCO_16                      | VCCO          |             |      16 |            |      |                     |                      |   any** |            |           |          |      |                  |              |                   |              |
+| G13        |             | High Range | VCCO_16                      | VCCO          |             |      16 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | G17        | green[2]    | High Range | IO_L5N_T0_D07_14             | OUTPUT        | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | G18        |             | High Range | IO_L2P_T0_D02_14             | User IO       |             |      14 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | G19        | red[0]      | High Range | IO_L4N_T0_D05_14             | OUTPUT        | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |

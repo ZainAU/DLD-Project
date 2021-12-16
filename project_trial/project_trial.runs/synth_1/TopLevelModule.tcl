@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/zu06777/Documents/Vivado/project_trial/project_trial.runs/synth_1/TopLevelModule.tcl"
+  variable script "F:/Documents/HabibU/5. Semester 3 - Fall 2021/XueXi/DLD - CS 130/DLD Project/project_trial/project_trial.runs/synth_1/TopLevelModule.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,23 +70,22 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
-set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/zu06777/Documents/Vivado/project_trial/project_trial.cache/wt [current_project]
-set_property parent.project_path C:/Users/zu06777/Documents/Vivado/project_trial/project_trial.xpr [current_project]
+set_property webtalk.parent_dir {F:/Documents/HabibU/5. Semester 3 - Fall 2021/XueXi/DLD - CS 130/DLD Project/project_trial/project_trial.cache/wt} [current_project]
+set_property parent.project_path {F:/Documents/HabibU/5. Semester 3 - Fall 2021/XueXi/DLD - CS 130/DLD Project/project_trial/project_trial.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/zu06777/Documents/Vivado/project_trial/project_trial.cache/ip [current_project]
+set_property ip_output_repo {f:/Documents/HabibU/5. Semester 3 - Fall 2021/XueXi/DLD - CS 130/DLD Project/project_trial/project_trial.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib C:/Users/zu06777/Documents/Vivado/project_trial/project_trial.srcs/sources_1/new/TopLevelModule.v
+read_verilog -library xil_defaultlib {{F:/Documents/HabibU/5. Semester 3 - Fall 2021/XueXi/DLD - CS 130/DLD Project/project_trial/project_trial.srcs/sources_1/new/TopLevelModule.v}}
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -96,8 +95,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/zu06777/Documents/Vivado/project_trial/project_trial.srcs/constrs_1/new/TopLevelModule.xdc
-set_property used_in_implementation false [get_files C:/Users/zu06777/Documents/Vivado/project_trial/project_trial.srcs/constrs_1/new/TopLevelModule.xdc]
+read_xdc {{F:/Documents/HabibU/5. Semester 3 - Fall 2021/XueXi/DLD - CS 130/DLD Project/project_trial/project_trial.srcs/constrs_1/new/TopLevelModule.xdc}}
+set_property used_in_implementation false [get_files {{F:/Documents/HabibU/5. Semester 3 - Fall 2021/XueXi/DLD - CS 130/DLD Project/project_trial/project_trial.srcs/constrs_1/new/TopLevelModule.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

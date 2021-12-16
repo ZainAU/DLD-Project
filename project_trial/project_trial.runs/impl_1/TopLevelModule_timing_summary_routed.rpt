@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Sat Nov 27 11:37:47 2021
-| Host         : HU-DOPX-COM03 running 64-bit major release  (build 9200)
+| Date         : Thu Dec 16 18:15:50 2021
+| Host         : Another-Ideapad running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file TopLevelModule_timing_summary_routed.rpt -pb TopLevelModule_timing_summary_routed.pb -rpx TopLevelModule_timing_summary_routed.rpx -warn_on_violation
 | Design       : TopLevelModule
 | Device       : 7a35t-cpg236
@@ -42,7 +42,7 @@ Table of Contents
 1. checking no_clock (33)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (64)
+4. checking unconstrained_internal_endpoints (66)
 5. checking no_input_delay (1)
 6. checking no_output_delay (12)
 7. checking multiple_clock (0)
@@ -69,9 +69,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (64)
+4. checking unconstrained_internal_endpoints (66)
 -------------------------------------------------
- There are 64 pins that are not constrained for maximum delay. (HIGH)
+ There are 66 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 

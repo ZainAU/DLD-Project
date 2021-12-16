@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zu06777" Host="HU-DOPX-COM03" Pid="10244" HostCore="4" HostMemory="08485597184">
+    <Process Command="vivado.bat" Owner="CC" Host="ANOTHER-IDEAPAD" Pid="21232" HostCore="4" HostMemory="012753539072">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="zu06777" Host="HU-DOPX-COM03" Pid="13624" HostCore="4" HostMemory="08485597184">
+    <Process Command="vivado.bat" Owner="CC" Host="ANOTHER-IDEAPAD" Pid="19704" HostCore="4" HostMemory="012753539072">
     </Process>
 </ProcessHandle>

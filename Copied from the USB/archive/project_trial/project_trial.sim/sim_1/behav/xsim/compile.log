@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zu06777/Documents/Vivado/project_trial/project_trial.srcs/sources_1/new/keyboard.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Keyboard
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zu06777/Documents/Vivado/project_trial/project_trial.srcs/sources_1/new/TopLevelModule.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Keyboard
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'Keyboard' [C:/Users/zu06777/Documents/Vivado/project_trial/project_trial.srcs/sources_1/new/keyboard.v:26]
+INFO: [VRFC 10-311] analyzing module TopLevelModule
+INFO: [VRFC 10-2458] undeclared symbol state, assumed default net type wire [C:/Users/zu06777/Documents/Vivado/project_trial/project_trial.srcs/sources_1/new/TopLevelModule.v:30]
+INFO: [VRFC 10-311] analyzing module vga_sync
+INFO: [VRFC 10-311] analyzing module startup
+INFO: [VRFC 10-311] analyzing module learn
+INFO: [VRFC 10-311] analyzing module pixel_gen
+INFO: [VRFC 10-311] analyzing module h_counter
+INFO: [VRFC 10-311] analyzing module v_counter
+INFO: [VRFC 10-311] analyzing module clk_div
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/zu06777/Documents/Vivado/project_trial/project_trial.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

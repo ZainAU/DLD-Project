@@ -1,0 +1,7 @@
+0.7
+2020.1
+May 27 2020
+20:09:33
+C:/Users/zu06777/Documents/Vivado/project_trial/project_trial.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
+C:/Users/zu06777/Documents/Vivado/project_trial/project_trial.srcs/sources_1/new/TopLevelModule.v,1639133750,verilog,,,C:/Users/zu06777/Documents/Vivado/project_trial/project_trial.srcs/sources_1/new/keyboard.v,TopLevelModule;clk_div;h_counter;learn;pixel_gen;startup;v_counter;vga_sync,,,,,,,,
+C:/Users/zu06777/Documents/Vivado/project_trial/project_trial.srcs/sources_1/new/keyboard.v,1639133433,verilog,,C:/Users/zu06777/Documents/Vivado/project_trial/project_trial.srcs/sources_1/new/TopLevelModule.v,,Keyboard,,,,,,,,

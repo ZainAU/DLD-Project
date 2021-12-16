@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/zu06777/Documents/Vivado/project_trial/project_trial.srcs/constrs_1/new/TopLevelModule.xdc rfile:../../../project_trial.srcs/constrs_1/new/TopLevelModule.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{F:/Documents/HabibU/5. Semester 3 - Fall 2021/XueXi/DLD - CS 130/DLD Project/project_trial/project_trial.srcs/constrs_1/new/TopLevelModule.xdc} rfile:../../../project_trial.srcs/constrs_1/new/TopLevelModule.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN G19 [get_ports {red[0]}]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
